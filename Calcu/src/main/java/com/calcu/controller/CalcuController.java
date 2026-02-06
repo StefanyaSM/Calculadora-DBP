@@ -36,15 +36,33 @@ public class CalcuController {
     	return "Bienvenido a una calculadora bien basica";
     }
 
-    @GetMapping("/calcu/{oper}/{n1}/{n2}") //SUMA
+    
+    //SUMA
+    @GetMapping("/calcu/suma/{n1}/{n2}") 
     public String suma(@PathVariable int n1, @PathVariable int n2) {
 			
-			int resultado= n1 + n2;
+			int Rsuma= n1 + n2;
    
-        return "Resultado = " + resultado;
+        return "Resultado de sumar= " + n1 + "+" + n2 + " = " + Rsuma;
     }
     
+    //RESTA
+    @GetMapping("/calcu/resta/{n1}/{n2}")
+    public String resta(@PathVariable int n1, @PathVariable int n2) {
+			
+			int Rresta= n1 - n2;
+   
+        return "Resultado de restar =" + n1 + "-" + n2 + "="+ Rresta;
+    }
     
+  //MULTIPLICACION
+    @GetMapping("/calcu/multi/{n1}/{n2}")
+    public String multi(@PathVariable int n1, @PathVariable int n2) {
+			
+			int Rmulti= n1 * n2;
+   
+        return "Resultado de multiplicar =" + n1 + "*" + n2 +"="+ Rmulti;
+    }
     
     
 }
