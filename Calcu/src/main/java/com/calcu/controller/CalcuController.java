@@ -36,34 +36,16 @@ public class CalcuController {
     	return "Bienvenido a una calculadora bien basica";
     }
 
-    @GetMapping("/calcu/{oper}/{n1}/{n2}")
-    public String calc(@PathVariable String oper,
-                     
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    		
+    @GetMapping("/calcu/{oper}/{n1}/{n2}") //SUMA
+    public String suma(@PathVariable int n1, @PathVariable int n2) {
+			
+			int resultado= n1 + n2;
+   
         return "Resultado = " + resultado;
     }
+    
+    
+    
+    
 }
   
